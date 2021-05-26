@@ -1,5 +1,6 @@
 // import ExpenseItem from "./components/ExpenseItem";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 import Card from "./components/UI/Card";
 import "./components/Expenses/Expenses.css";
 // import
@@ -36,9 +37,15 @@ function App() {
   //   );
   // });
   // console.log(expenseList);
+
+  const addExpenseHandler = (newExpenseData) => {
+    console.log("In App.js");
+    console.log(newExpenseData);
+  };
+
   return (
     <div>
-      <h2>Let's get started SP!</h2>
+      <NewExpense onAddExpense={addExpenseHandler} />
 
       <Card className="expenses">
         <Expenses expenses={expenses} />
