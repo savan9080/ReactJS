@@ -29,6 +29,7 @@ const ExpenseForm = (props) => {
     //   };
     // });
   };
+
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
     // setUserInput((prevState) => {
@@ -39,19 +40,42 @@ const ExpenseForm = (props) => {
     // });
   };
 
+  const [btnName, setBtnName] = useState("Only Button");
+
+  const cancelHandler = () => {
+    setBtnName("Only Button");
+  };
+
+  const onlyButtonHandler = () => {
+    setBtnName("Display Form");
+    // console.log("Btn Pressed");
+  };
+
   const submitHandler = (event) => {
+    setBtnName("Only Button");
     event.preventDefault();
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
+    // console.log(expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
     props.onSaveExpenseData(expenseData);
     // console.log(expenseData);
   };
+
+  if (btnName === "Only Button") {
+    return (
+      <div className="new-expense_actions">
+        <button type="text" onClick={onlyButtonHandler}>
+          Add New Expense!
+        </button>
+      </div>
+    );
+  }
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
@@ -84,6 +108,11 @@ const ExpenseForm = (props) => {
             max="2022-12-31"
             onChange={dateChangeHandler}
           />
+        </div>
+        <div className="new-expense_actions">
+          <button type="text" onClick={cancelHandler}>
+            Cancel
+          </button>
         </div>
         <div className="new-expense_actions">
           <button type="submit">Add Expense!</button>
