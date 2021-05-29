@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 /.pnp
+/my-project/node_modules
+/first-project/node_modules
+/project-goals/node_modules
 .pnp.js
 
 # testing
