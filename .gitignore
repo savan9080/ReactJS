@@ -8,6 +8,7 @@
 /project-goals/node_modules
 /demo-project-section8/node_modules
 /section9-project/node_modules
+/section10-project/node_modules
 .pnp.js
 
 # testing
