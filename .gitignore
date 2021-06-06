@@ -9,6 +9,8 @@
 /demo-project-section8/node_modules
 /section9-project/node_modules
 /section10-project/node_modules
+/food-order-app/node_modules
+
 .pnp.js
 
 # testing
