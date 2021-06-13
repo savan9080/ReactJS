@@ -11,6 +11,7 @@
 /section10-project/node_modules
 /section12-class-component/node_modules
 /food-order-app/node_modules
+/db-project/node_modules
 
 .pnp.js
 
