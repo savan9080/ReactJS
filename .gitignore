@@ -12,6 +12,11 @@
 /section12-class-component/node_modules
 /food-order-app/node_modules
 /db-project/node_modules
+/more-custom-hooks/node_modules
+/custom-hooks/node_modules
+/working-with-forms/node_modules
+
+
 
 .pnp.js
 
